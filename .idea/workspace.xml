@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f06be2-6f25-4c85-ae62-de4afe8a25be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
@@ -44,11 +47,23 @@
       <updated>1614590076865</updated>
       <workItem from="1614590080662" duration="1091000" />
       <workItem from="1614591507669" duration="3454000" />
-      <workItem from="1614667080439" duration="5440000" />
+      <workItem from="1614667080439" duration="6046000" />
+      <workItem from="1614752629353" duration="5540000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
