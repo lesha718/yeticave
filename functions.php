@@ -50,6 +50,15 @@ $data_list = [
     ],
 ];
 
+function time_left(){
+    $tomorrow = strtotime('tomorrow');
+    $time_now = strtotime('now');
+    $times_left = $tomorrow - $time_now;
+    $hours = floor($times_left/3600);
+    $minutes = floor(($times_left%3600)/60);
+    $times_left = sprintf("%02d:%02d",$hours,$minutes);
+    return $times_left;
+}
 function Sum_Price($sum, $withRubleElem)
 {
     ceil($sum);
