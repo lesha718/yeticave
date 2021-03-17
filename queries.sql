@@ -27,5 +27,5 @@ SELECT categ_name FROM `categories`;
 SELECT * FROM `lots` WHERE lot_comp_date is NULL;
 SELECT lot_id, lot_categ_id, lot_user_id, lot_winner_id, lot_name, lot_discr, lot_cr_date, lot_img, lot_first_price, lot_comp_date, lot_step, categ_name FROM `lots`, `categories` WHERE lot_id = '4' AND categ_id = '2';
 UPDATE `lots` SET lot_name = '2014 Rossignol District Snowboard Black Edition' WHERE lot_id = 2;
-SELECT * FROM `rate` WHERE rate_id = '2' AND DATEDIFF(CURDATE(), rate_date) = 0; 
+SELECT * FROM `rate` WHERE rate_id = '2' AND DATEDIFF(CURDATE(), rate_date) = 0;
 
