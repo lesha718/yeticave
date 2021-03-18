@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title><?$page_title;?></title>
+    <title><?=$Page_Title;?></title>
     <link href="../css/normalize.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -19,15 +20,15 @@
                 <input type="search" name="search" placeholder="Поиск лота">
                 <input class="main-header__search-btn" type="submit" name="find" value="Найти">
             </form>
-            <a class="main-header__add-lot button" href="../pages/add-lot.html">Добавить лот</a>
+            <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
 
             <nav class="user-menu">
-                <?php if($is_auth): ?>
+                <?php if($is_auth==1): ?>
                     <div class="user-menu__image">
-                        <img src="../img/user.jpg" width="40" height="40" alt="Пользователь">
+                        <img src="<?=$user_avatar;?>" width="40" height="40" alt="Пользователь">
                     </div>
                     <div class="user-menu__logged">
-                        <p><?php echo($user_name); ?></p>
+                        <p> <?php echo($user_name); ?> </p>
                     </div>
                 <?php else: ?>
                     <ul class="user-menu__list">
@@ -38,25 +39,25 @@
                             <a href="#">Вход</a>
                         </li>
                     </ul>
+                    <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
                 <?php endif; ?>
-                <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
-
             </nav>
         </div>
     </header>
 
-    <main>
-        <?=$page_content;?>
+    <main class="container">
+       <?=$page_content;?>
+
     </main>
 </div>
 
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-            <?php foreach($categories_list as $a=>$val) :?>
-                <!--заполните этот список из массива категорий-->
-                <li class="nav__item nav__item--<?php $a?>">
-                    <a href="../pages/all-lots.html"><?php echo($val);?></a>
+            <!--заполните этот список из массива категорий-->
+            <?php foreach($categories_list as $item): ?>
+                <li class="nav__item">
+                    <a href="pages/all-lots.html"><?= $item['categ_name'];?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -103,7 +104,7 @@
     </div>
 </footer>
 
-<script src="../flatpickr.js"></script>
-<script src="../script.js"></script>
+<script src="flatpickr.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
